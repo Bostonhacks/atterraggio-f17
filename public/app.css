@@ -4,14 +4,27 @@ h1,
 h2,
 h3,
 h4 {
-  color: #FFFFFF;
+  color: #F9F5EF;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
  }
 
+svg {
+  max-width: 10em;
+  height: auto;
+}
+
 .text {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
+  color: #F9F5EF;
+  font-size: 1.1em;
+}
+
+.p-text {
+  font-weight: 500;
+  color: #F9F5EF;
+  font-size: 1.1em;
 }
 
 h1 { font-size: 32px; }
@@ -23,22 +36,18 @@ h3 { font-size: 18px; }
 h4 { font-size: 14px; }
 
 body {
-    background-color: #222B30;
+  background-color: #212939;
 }
 
 #mlh-trust-badge {
-    display:block;
-    max-width:100px;
-    min-width:60px;
-    position:fixed;
-    right:50px;
-    top:0;
-    width:10%;
-    z-index:10000;
-}
-
-.button:hover, .button:focus {
-  background-color:  #34434b;
+  display:block;
+  max-width:100px;
+  min-width:60px;
+  position:fixed;
+  right:50px;
+  top:0;
+  width:10%;
+  z-index:10000;
 }
 
 .black { 
@@ -61,86 +70,69 @@ body {
 }
 
 #homeButtonsContainer {
-  margin-top: 50px;
+  margin-top: 20px;
   margin-bottom: 20px;
 }
 
 .homeButtons {
-    width: 250px;
-    border-width: 2px;
-    padding: 8px 30px 8px 30px;
-
-    background-color: transparent;
-    border-color: #EF6262;
-    
-    font-size: 24px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+  width: 250px;
+  border-width: 2px;
+  padding: 8px 30px 8px 30px;
+  
+  border-radius: 21px;
+  
+  font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
 }
 
 #attendButton {
-  margin-right: 50px;
+  background-color: #F58549;
+  margin-right: 30px;
 }
 
 #sponsorButton {
-  margin-left: 50px;
+  background-color: #E69C61;
+  margin-left: 30px;
 }
 
-
-/* Schedule */
-#scheduleContainer {
-  width: 60%;
-  margin: 0 auto;
-  margin-top: 60px;
-  margin-bottom: 60px;
+.button:hover, .button:focus {
+  background-color: #C16C3E !important;
 }
 
-/* DO I EVEN NEED THIS??*/
-.scheduleItem {
-  overflow-x: auto;
+/* About */
+#about {
+  background-color: #2F3B53;
 }
 
-.scheduleEvent {
-    float: left;
+#aboutHeader {
+  padding-left: 40px;
+  font-weight: bold;
 }
 
-.scheduleEventTime {
-    float: right;
+/* Attend */
+
+#attend {
+  background-color: #2F3B53;
 }
 
-/* Hi, clearly you've found this. Sorry if this makes you cringe because 
-   there is a way better way to do this... submit a PR if you do!!:)
-*/
-@media screen and (max-width: 600px) {
-    .scheduleItem h2 {
-        font-size: 18px;
-    }
-
-    #scheduleContainer {
-        width: 90%;
-    }
+#mc_embed_signup {
+  background-color: #2F3B53 !important;
 }
 
-/*@media screen and (max-width: 600px) {
-    .scheduleItem h2 {
-        font-size: 18px;
-    }
-}
-*/
-
-
-#saturday {
-  margin-top: 20px;
+label {
+  color: white !important;
 }
 
-#sunday {
-  margin-top: 70px;
+#mc-embedded-subscribe {
+  background-color: #F58549;
+  border-radius: 20px;
 }
 
 /* FAQ */
 #faq {
   width: 100%;
-  background-color: #A1DEFF;
+  background-color: #2F3B53;
   padding-bottom: 50px;
 }
 
@@ -149,7 +141,7 @@ body {
   height: 0;
   border-style: solid;
   border-width: 0 200px 100px 0;
-  border-color: transparent #222B30 transparent transparent;
+  border-color: transparent #212939 transparent transparent;
 }
 
 .faqTransitionRight {
@@ -157,16 +149,16 @@ body {
   height: 0;
   border-style: solid;
   border-width: 0 0 100px 200px;
-  border-color: transparent transparent transparent #A1DEFF;
+  border-color: transparent transparent transparent #2F3B53;
 }
 
 #faqContainer {
   width: 100%;
-  background-color: #A1DEFF;
+  background-color: #2F3B53;
 }
 
 .header {
-  padding-top: 60px;
+  padding-top: 40px;
   padding-bottom: 40px;
 }
 
@@ -175,7 +167,7 @@ body {
 }
 
 .sponsor-img {
-    height: 80px;
+  height: 80px;
 }
 
 #contact {
@@ -193,34 +185,28 @@ body {
   text-align: center;
 }
 
-#buildingSVG { 
-    top:0;
-    left:0;
-    height:100%;
-    width:100%;
+/* Animation */
+
+#icon-ghost {
+  transform: translate(35%,-15%);
+  animation: bob-the-ghost 4s ease-in-out 0s infinite alternate; 
 }
 
-.serverMessageSuccess {
-  color: #008000;
-  border: 1px solid #009900;
-
-  background-color: #ccffcc;
-  padding: 5px 5px 5px 5px;
-  margin: 10px 30px 10px 30px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  text-align: center;
-  display: inline-block;
+#icon-pump {
+  transform: translate(35%,-15%) rotate(0deg);
+  animation: bob-the-pump 8s ease-in-out 0s infinite alternate; 
 }
 
-.serverMessageError {
-  color: #e81717;
-  border: 1px solid #f58a8a;
-  background-color: #fbd0d0;
-  padding: 5px 5px 5px 5px;
-  margin: 10px 30px 10px 30px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  text-align: center;
-  display: inline-block;
+@keyframes bob-the-ghost {
+  from { transform: translate(35%,-15%); }
+  to { transform: translate(35%,-5%); }
+}
+
+@keyframes bob-the-pump {
+  0% { transform: translate(35%,-15%) rotate(0deg); }
+  90% { transform: translate(35%,-15%) rotate(2deg); }
+  92% { transform: translate(33%,-15%) rotate(-2deg); }
+  94% { transform: translate(36%,-15%) rotate(2deg); }
+  96% { transform: translate(36%,-15%) rotate(-2deg); }
+  100% { transform: translate(35%,-15%) rotate(0deg); }
 }

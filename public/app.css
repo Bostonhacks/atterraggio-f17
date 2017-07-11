@@ -122,11 +122,16 @@ body {
 
 label {
   color: white !important;
+  text-align: left !important;
 }
 
 #mc-embedded-subscribe {
   background-color: #F58549;
   border-radius: 20px;
+}
+
+#mc_embed_signup form {
+  text-align: left !important;
 }
 
 /* FAQ */
@@ -193,7 +198,7 @@ label {
 }
 
 #icon-pump {
-  transform: translate(35%,-15%) rotate(0deg);
+  transform: translate(35%,20%) rotate(0deg);
   animation: bob-the-pump 8s ease-in-out 0s infinite alternate; 
 }
 
@@ -203,10 +208,10 @@ label {
 }
 
 @keyframes bob-the-pump {
-  0% { transform: translate(35%,-15%) rotate(0deg); }
-  90% { transform: translate(35%,-15%) rotate(2deg); }
-  92% { transform: translate(33%,-15%) rotate(-2deg); }
-  94% { transform: translate(36%,-15%) rotate(2deg); }
-  96% { transform: translate(36%,-15%) rotate(-2deg); }
-  100% { transform: translate(35%,-15%) rotate(0deg); }
+  0% { transform: translate(35%,20%) rotate(0deg); }
+  90% { transform: translate(35%,20%) rotate(2deg); }
+  92% { transform: translate(33%,20%) rotate(-2deg); }
+  94% { transform: translate(36%,20%) rotate(2deg); }
+  96% { transform: translate(36%,20%) rotate(-2deg); }
+  100% { transform: translate(35%,20%) rotate(0deg); }
 }

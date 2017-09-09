@@ -1,10 +1,37 @@
 /* General*/
+$bgColor: #EADFD8;
+$borderColor: #A69C95;
+$bgColorLight: #212939;
+$offWhite: #F9F5EF;
+$orange: #F58549;
+$orange-hover: #C16C3E;
+$transparent-bg: rgba(42,45,60,0.90);
+
+$dark-on-light: #4A4B4E;
+$darkish-on-light: #727478;
+$light-on-dark: #F58549;
+
+.row {
+  max-width: none !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.float-left {
+  float: left !important;
+}
+
+.text-orange {
+  color: $orange;
+}
 
 h1,
 h2,
 h3,
 h4 {
-  color: #F9F5EF;
+  color: $offWhite;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
  }
@@ -15,25 +42,25 @@ svg {
 }
 
 a {
-  color: white;
+  color: $orange;
   text-decoration: none;
 }
 
 a:hover, a:focus {
-  color: white;
+  color: $orange-hover;
   text-decoration: none;
 }
 
 .text {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  color: #F9F5EF;
-  font-size: 1.1em;
+  color: $offWhite;
+//   font-size: 1.1em;
 }
 
 .p-text {
   font-weight: 500;
-  color: #F9F5EF;
+  color: $offWhite;
   font-size: 1.1em;
 }
 
@@ -46,7 +73,23 @@ h3 { font-size: 18px; }
 h4 { font-size: 14px; }
 
 body {
-  background-color: #212939;
+  background-color: $bgColorLight;
+}
+
+// Landing image bg
+#bg-image {
+  background: url('/public/homebg3.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#bg-overlay {
+  background-color: $transparent-bg;
+}
+
+#home {
+  padding-bottom: 20px;
 }
 
 #mlh-trust-badge {
@@ -78,20 +121,100 @@ body {
   margin-right: auto;
 }
 
-/* About */
-#about {
-  background-color: #2F3B53;
+// General section styling
+.section-light {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: $bgColor;
+}
+.section-light p {
+  color: $dark-on-light;
+}
+.section-light h1 {
+  font-weight: 300;
+  color: $dark-on-light;
+}
+.section-light h3 {
+  color: $dark-on-light;
 }
 
-#aboutHeader {
-  padding-left: 40px;
-  font-weight: bold;
+.section-dark {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
+
+.section-dark p {
+  color: $offWhite;
+}
+
+.section-dark h1 {
+  color: $light-on-dark;
+}
+
+/* About */
+#about {
+  background-color: $bgColor;
+  padding: 0;
+  transition: background-color 0.3s;
+}
+
+#about .header {
+  padding-top: 40px;
+}
+
+#about-hacking {
+  background-color: $orange;
+  border-radius: 1000px 0px 0px 1000px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#about-hacking:hover, #about-hacking:active {
+  cursor: pointer;
+  background-color: $orange-hover;
+  transform: translate(10px,0px);
+}
+
+#about-hacking h1 {
+  font-weight: 300;
+  padding: 100px 0px 100px 0px;
+  color: white;
+}
+
+#aboutHackathons {
+  background-color: $orange;
+}
+
+#aboutHackathons p, #aboutHackathons h1 {
+  color: $offWhite;
+}
+
+@media (max-width: 1023px) {
+  #about-hacking {
+    border-radius: 0px;
+    height: 100px !important;
+  }
+  #about-hacking:hover, #about-hacking:active {
+    transform: translate(0px,10px);
+  }
+  #about-hacking h1 {
+    padding: 0px;  
+  }
+}
+
+/*
+#about-hacking::before {
+  width: 100%;
+  border-style: solid;
+  border-width: 0 0 1000px 20px;
+  border-color: transparent transparent transparent $bgColor;
+  overflow-y: hidden;
+}
+*/
 
 /* Attend */
 
 #attend {
-  background-color: #2F3B53;
+//   background-color: $bgColor;
 }
 
 #homeButtonsContainer {
@@ -113,25 +236,25 @@ body {
 }
 
 #attendButton {
-  background-color: #F58549;
+  background-color: $orange;
   margin-right: 30px;
   
   transition: background-color 0.3s;
 }
 
 #sponsorButton {
-  background-color: #F58549;
+  background-color: $orange;
   margin-left: 30px;
   
   transition: background-color 0.3s;
 }
 
 .button:hover, .button:focus {
-  background-color: #C16C3E !important;
+  background-color: $orange-hover !important;
 }
 
 #mc_embed_signup {
-  background-color: #212939 !important;
+  background-color: $bgColorLight !important;
 }
 
 label {
@@ -139,7 +262,7 @@ label {
 }
 
 #mc-embedded-subscribe {
-  background-color: #F58549;
+  background-color: $orange;
   border-radius: 20px;
   transition: background-color 0.3s;
 }
@@ -165,11 +288,67 @@ label {
   }
 }
 
+// Tracks
+
+.track-container {
+  background-color: $bgColor;
+  border-radius: 10px;
+  border: 2px solid $borderColor;
+}
+
+.track-container > * {
+  padding: 20px;
+}
+
+.track-container h2 {
+  text-align: center;
+  color: $darkish-on-light;
+  font-weight: 600;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.track-container h3 {
+  padding-top: 20px;
+  padding-bottom: 5px;
+  font-weight: 600;
+  color: $darkish-on-light;
+}
+
+.track-container p {
+  color: $dark-on-light;
+}
+
+.track-workshop {
+  position: relative;
+  top: -1px;
+  color: $dark-on-light;
+  border-top: 1px solid $borderColor;
+//   border-bottom: 1px solid $borderColor;
+}
+
+.track-workshop i {
+  text-align: right;
+  position: absolute;
+  right: 20px;
+  bottom: 16px;
+}
+
+.track-question {
+  color: $darkish-on-light;
+  width: 100%;
+  margin-top: calc(50% - 40px);
+  text-align: center;
+}
+
 /* FAQ */
 #faq {
   width: 100%;
-  background-color: #2F3B53;
   padding-bottom: 50px;
+}
+
+#faq h3 {
+  font-weight: 600;
 }
 
 .faqTransitionLeft {
@@ -177,7 +356,7 @@ label {
   height: 0;
   border-style: solid;
   border-width: 0 200px 100px 0;
-  border-color: transparent #212939 transparent transparent;
+  border-color: transparent $bgColorLight transparent transparent;
 }
 
 .faqTransitionRight {
@@ -185,22 +364,22 @@ label {
   height: 0;
   border-style: solid;
   border-width: 0 0 100px 200px;
-  border-color: transparent transparent transparent #2F3B53;
+  border-color: transparent transparent transparent $bgColor;
 }
 
 #faqContainer {
   width: 100%;
-  background-color: #2F3B53;
 }
 
 .header {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
+/*
 #faqHeader {
   color: #222B30;
 }
+*/
 
 .sponsor-img {
   height: 80px;
@@ -224,7 +403,7 @@ label {
 /* Animation */
 
 #icon-ghost {
-  transform: translate(35%,-15%);
+  transform: translate(35%,-10%);
   animation: bob-the-ghost 4s ease-in-out 0s infinite alternate; 
 }
 
@@ -234,8 +413,8 @@ label {
 }
 
 @keyframes bob-the-ghost {
-  from { transform: translate(35%,-15%); }
-  to { transform: translate(35%,-5%); }
+  from { transform: translate(35%,-10%); }
+  to { transform: translate(35%,0%); }
 }
 
 @keyframes bob-the-pump {

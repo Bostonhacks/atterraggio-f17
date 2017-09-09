@@ -12,6 +12,7 @@
 <link href="./public/css" rel="stylesheet">
 <link rel="stylesheet" href="./public/foundation.css">
 <link rel="stylesheet" href="./public/style.css">
+<link rel="stylesheet" href="./libs/font-awesome-4.7.0/css/font-awesome.min.css">
 
 <script async="" src="https://www.google-analytics.com/analytics.js"></script><script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -30,8 +31,10 @@
 <meta class="foundation-mq"></head>
 <body>
     <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/na-2018/events?utm_source=na-2018&utm_medium=TrustBadge&utm_campaign=na-2018&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg" alt="Major League Hacking 2017 Hackathon Season" style="width:100%"></a>
-
-    <div id="navContainer">
+    
+    <div id="bg-image">
+    <div id="bg-overlay">
+      <div id="navContainer">
         <button class="hamburger hamburger--slider" id="nav--burger" type="button">
             <span class="hamburger-box">
                 <span class="hamburger-inner"></span>
@@ -39,10 +42,12 @@
         </button>
 
         <div class="navLinks">
-          <a href="#home" class="navLink">
+          <!--
+<a href="#home" class="navLink">
               <h3>Home</h3>
           </a>
           <div class="nav-separator"></div>
+-->
           
           <a href="#about" class="navLink">
               <h3>About</h3>
@@ -50,8 +55,26 @@
           
           <div class="nav-separator"></div>
           
-          <a href="#about" class="navLink">
+          <a href="#learn" class="navLink">
+              <h3>Learning</h3>
+          </a>
+          
+          <div class="nav-separator"></div>
+          
+          <a href="#details" class="navLink">
               <h3>Schedule</h3>
+          </a>
+          
+          <div class="nav-separator"></div>
+          
+          <a href="#faq" class="navLink">
+              <h3>FAQ</h3>
+          </a>
+          
+          <div class="nav-separator"></div>
+          
+          <a href="#sponsor" class="navLink">
+              <h3>Sponsors</h3>
           </a>
           
           <div class="nav-separator"></div>
@@ -61,39 +84,52 @@
           </a>
         </div>
     </div>
-
-    <!-- Need this br -->
-    <br>
-
-    <section id="home">      
-        <div class="homeContainer">
-        
-            <img src="./public/terrierLogo.png" id="terrierLogo">
-
-            <h1>Boston<b>Hacks</b> Fall 2017</h1>
-            <h2>October 28th - 29th<br>Boston, MA</h2>
-            <br>
-            <div id="homeButtonsContainer">
-                <div id="buttonWrapper">
-                  <a href="#attend" class="button homeButtons" id="attendButton">Attend</a>
-                  <a href="/BostonHacksFall2017Sponsor.pdf" class="button homeButtons" id="sponsorButton">Sponsor</a>
-                </div>
-            </div>
+    
+      <!-- Need this br -->
+      <br>
+  
+      <section id="home">      
+          <div class="homeContainer">
+          
+              <img src="./public/terrierLogo.png" id="terrierLogo">
+  
+              <h1>Boston<b>Hacks</b> Fall 2017</h1>
+              <h2>October 28th - 29th<br>Boston, MA</h2>
+              <br>
+              <div id="homeButtonsContainer">
+                  <div id="buttonWrapper" class="navLinks">
+                    <a href="#attend" class="button homeButtons" id="attendButton">Attend</a>
+                    <a href="#sponsor" class="button homeButtons navLink" id="sponsorButton">Sponsor</a>
+                  </div>
+              </div>
+          </div>
+      </section>
+    </div>
+    </div>
+    
+    <section class="section-light" id="about">
+<!--       <div class="faqTransitionLeft" style="border-width: 0px 1280px 100px 0px;"></div> -->
+      <div class="row" data-equalizer>
+        <div class="columns small-12 large-7 force-left-margin" data-equalizer-watch>
+          <h1 class="header" id="aboutHeader">Welcome to Boston</h1>
+          <p class="p-text" id="aboutText">BostonHacks is Boston University's annual hackathon. 400 students will come from all around North America to create a project in 24 hours. They'll forms teams to build project that addresses a problem or idea, learning about different technologies along the way and building their experience as developers.</p>
+          <br>
         </div>
+        
+        <div class="columns small-12 large-4" id="about-hacking" onclick="clickWhatIsHackathon()" data-equalizer-watch>
+          <h1 class="text-center" id="what-is-question">What is a Hackathon? &nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i></h1>
+        </div>
+      </div>
     </section>
-    
-    <br>
-    
-    <section class="" id="about">
-      <div class="faqTransitionLeft" style="border-width: 0px 1280px 100px 0px;"></div>
-      <h1 class="header" id="aboutHeader"> About BostonHacks </h1>
+<!--     <div class="faqTransitionRight" style="border-width: 0px 0px 100px 1280px;"></div> -->
+
+    <section class="section-dark" id="learn">
       <div class="row">
         <div class="columns small-12 large-8 force-left-margin">
-          <div class="p-text">BostonHacks is Boston University's annual hackathon. For 24 hours, you’ll come to BU to learn and create. You’ll forms teams to build a unique project around a problem or idea, learning about different technologies along the way.</div>
-          <br>
-          <div class="p-text">This year we have tracks, paths which you can optionally follow which include a comprehensive set of workshops, mentors, and materials to interact with, which will help you along the way of creating an awesome hack.</div>
+          <h1 class="header">Tracks</h1>
+          <p class="p-text">Structure paths will be offered, allowing students to subscribe to a set of workshops and work towards prizes that uses a specific set of technology. A comprehensive set of workshops, mentors, and learning materials will be available for students to utilize.</p>
         </div>
-        <div class="columns small-12 large-4">
+        <div class="float-left small-2 small-offset-5 large-4 large-offset-0 columns">
           <?xml version="1.0" encoding="UTF-8" standalone="no"?>
           <svg  id="icon-ghost" viewBox="0 0 219 293" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <title>Ghost</title>
@@ -112,15 +148,42 @@
               </g>
           </svg>
         </div>
+        </div>
+      </div>
+      <div class="row" data-equalize-on="large" data-equalizer>
+        
+        <div class="columns small-12 medium-offset-2 medium-8 large-4 large-offset-0" style="padding-left: 30px;">
+          <div class="track-container" data-equalizer-watch>
+            <div class="track-question"><i class="fa fa-question fa-5x" aria-hidden="true"></i> <br> To be announced...</div>
+          </div>
+        </div>
+        
+        <div class="columns small-12 medium-offset-2 medium-8 large-4 large-offset-0">
+          <div class="track-container" data-equalizer-watch>
+            <h2>Machine Learning</h2>
+            <p>Lead by BU’s Machine Intelligence Community, come learn how to get into the basics of several ML frameworks, and move on to more advanced topics.</p>
+            <h3>WORKSHOPS</h3>
+            <div class="track-workshop">Introduction to PyTorch <i class="fa fa-caret-right fa-2x" aria-hidden="true"></i></div>
+            <div class="track-workshop">More TBA... <i class="fa fa-caret-right fa-2x" aria-hidden="true"></i></div>
+            <h3>PRIZES</h3>
+            <div class="track-workshop">TBA <i class="fa fa-caret-right fa-2x" aria-hidden="true"></i></div>
+<!--             <div class="track-workshop"><i class="fa fa-caret-right fa-2x" aria-hidden="true"></i></div> -->
+          </div>
+        </div>
+        
+        <div class="columns small-12 medium-offset-2 medium-8 large-4 large-offset-0" style="float: left; padding-right: 30px;">
+          <div class="track-container" data-equalizer-watch>
+            <div class="track-question"><i class="fa fa-question fa-5x" aria-hidden="true"></i> <br> To be announced...</div>
+          </div>
+        </div>
+        
       </div>
     </section>
-    <div class="faqTransitionRight" style="border-width: 0px 0px 100px 1280px;"></div>
-
     
-    <section class="" id="details">
+    <section class="section-light" id="details">
       <div class="row">
         
-        <div id="icon-pump" class="columns small-12 large-4">
+        <div id="icon-pump" class="columns large-2 show-for-large-up">
           <?xml version="1.0" encoding="UTF-8" standalone="no"?>
           <svg width="297px" height="256px" viewBox="0 0 297 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
               <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
@@ -142,23 +205,23 @@
               </g>
           </svg>
         </div>
-        <h1 class="header force-right-align" id="aboutHeader"> Details </h1>
+        <h1 class="header force-right-align" id="aboutHeader">Details</h1>
         <div class="columns small-12 large-8 force-right-align">
-          <div class="p-text">Our event will begin in the morning on <b>Saturday, October 28th</b>,<br> and end in the afternoon on <b>Sunday, October 29th.</b></div>
+          <p class="p-text">Our event will begin in the morning on <b>Saturday, October 28th</b>,<br> and end in the afternoon on <b>Sunday, October 29th.</b></p>
           <br>
-          <div class="p-text">Location: <b>George Sherman Union</b>, 2nd Floor in Metcalf Hall at<br> <b>775 Commonwealth Avenue</b>, Boston, MA, 02215.</div>
+          <p class="p-text">Location: <b>George Sherman Union</b>, 2nd Floor in Metcalf Hall at<br> <b>775 Commonwealth Avenue</b>, Boston, MA, 02215.</p>
         </div>
       </div>
     </section>
     
     
-    <section id="attend">
-      <div class="faqTransitionLeft" style="border-width: 0px 1280px 100px 0px;"></div>
+    <!--
+<section id="attend">
       <h1 class="header" id="aboutHeader"> Attend </h1>
       <div class="row">
         <div id="" class="columns small-10 large-8 force-left-margin">
           <h3 class="p-text">Get notified when we open up applications later this summer</h3>
-          <!-- Begin MailChimp Signup Form -->
+          /* Begin mailchimp */
           <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
           <style type="text/css">
           	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
@@ -170,69 +233,131 @@
               <div id="mc_embed_signup_scroll">
           	<label for="mce-EMAIL">Email address: </label>
           	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="you@mail.com" required>
-              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
               <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_13cd178ce59e4de2a1ecb4265_6d310e812e" tabindex="-1" value=""></div>
               <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
               </div>
           </form>
           </div>
         </div>
-      </div>
+      </div>-->
       
       <!--End mc_embed_signup-->
-    </section>
-    <div class="faqTransitionRight" style="border-width: 0px 0px 100px 1280px;"></div>
-<!--
-    <section id="faq">
-      <div class="faqTransitionLeft" style="border-width: 0px 1280px 100px 0px;"></div>
-      <div id="faqContainer">
-        <h1 class="header text-center" id="faqHeader"> Frequently Asked Questions: </h1>
-        <div class="row">
-          <div class="columns large-4 small-12">
-              <h3 class="black">Where is it?</h3>
-              <div class="text">George Sherman Union, 2nd Floor in Metcalf Hall at 775 Commonwealth Avenue, Boston, MA, 02215.</div>
+      
+    <section id="schedule" class="section-dark">
+      <div class="row">
+        <div id="scheduleContainer">
+          <div class="columns small-12 medium-6 force-left-margin" id="saturday">
+          <h1>Schedule Overview</h1>
+          <h2> Saturday </h2>
+          <hr>
+          <div class="scheduleItem">
+            <h2 class="scheduleEvent"><b>10:00am</b> — Check-in & Registration </h2>
           </div>
-          <div class="columns large-4 small-12">
-              <h3 class="black">Who's coming?</h3>
-              <div class="text">We expect 400 hackers from all around the world to attend BostonHacks.</div>
+          <div class="scheduleItem">
+            <h2 class="scheduleEvent"><b>Noon</b> — Opening Ceremony </h2>
           </div>
-          <div class="columns large-4 small-12">
-              <h3 class="black">Who can attend?</h3>
-              <div class="text">All students are welcome. Unfortunately, we will not be able to accommodate students under 18 this year (unless you are a BU student).</div>
+          <div class="scheduleItem">
+            <h2 class="scheduleEvent"><b>1:00pm</b> — Team Formation Event </h2>
           </div>
-          <div class="columns large-4 small-12">
-              <h3 class="black">Do I need experience?</h3>
-              <div class="text">No experience necessary. We will have plenty of mentors and resources. Come, learn, and experience your first hackathon at BostonHacks!</div>
+          <div class="scheduleItem">
+            <h2 class="scheduleEvent"><b>1:00pm</b> — Lunch </h2>
           </div>
-          <div class="columns large-4 small-12">
-              <h3 class="black">Are there any rules?</h3>
-              <div class="text">We want to ensure a positive experience for every participant. We encourage you to read our 
-              <a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf">Code of Conduct</a>.</div>
+          <div class="scheduleItem">
+            <h2 class="scheduleEvent"><b>1:30pm</b> — Hacking Begins </h2>
           </div>
-          <div class="columns large-4 small-12">
-              <h3 class="black">What should I bring?</h3>
-              <div class="text">You should bring your laptop, phone, chargers, and sleeping bag. All food and other accommodations will be taken care of.</div>
+          <div class="scheduleItem">
+            <h2 class="scheduleEvent"><b>6:30pm</b> — Dinner </h2>
           </div>
-          <div class="columns large-4 small-12">
-              <h3 class="black">Can we form teams?</h3>
-              <div class="text">Of course you can! We encourage people to work in teams of up to 5 people. You can work alone, but it won't be the same. There will be plenty of team building events on site and online.</div>
-          </div>
-          <div class="columns large-4 small-12">
-              <h3 class="black">Does it cost anything?</h3>
-              <div class="text">BostonHacks is 100% free. You won't have to spend a dime! Everything will be absolutely free.</div>
-          </div>
-          <div class="columns large-4 small-12">
-              <h3 class="black">Will there be travel reimbursements?</h3>
-              <div class="text">We're working on providing travel reimbursements, and we will provide the form later.</div>
+        </div>
+          <div class="columns small-12 medium-6 force-left-margin" id="sunday">
+            <h1> &nbsp; </h1>
+            <h2> Sunday </h2>
+            <hr>
+            <div class="scheduleItem">
+              <h2 class="scheduleEvent"><b>Midnight</b> — Midnight Snack </h2>
+            </div>
+            <div class="scheduleItem">
+              <h2 class="scheduleEvent"><b>7:00am</b> — Breakfast begins </h2>
+            </div>
+            <div class="scheduleItem">
+              <h2 class="scheduleEvent"><b>10:00am</b> — Submissions due on Devpost* </h2>
+              <h2 class="scheduleEventTime">  </h2>
+            </div>
+            <div class="scheduleItem">
+              <h2 class="scheduleEvent"><b>11:00am</b> — Lunch </h2>
+            </div>
+            <div class="scheduleItem">
+              <h2 class="scheduleEvent"><b>12:00pm</b> — Judging Expo </h2>
+            </div>
+            <div class="scheduleItem">
+              <h2 class="scheduleEvent"><b>2:00pm</b> — Closing Ceremony</h2>
+            </div>
+            <div class="scheduleItem">
+              <h2 class="scheduleEvent"><b>3:00pm</b> — Go home and sleep </h2>
+            </div>
+            <br>
+            <p>* You may continue working on your project until the expo begins</p>
           </div>
         </div>
       </div>
     </section>
-    <div class="faqTransitionRight" style="border-width: 0px 0px 100px 1280px;"></div>
--->
+    </section>
+<!--     <div class="faqTransitionRight" style="border-width: 0px 0px 100px 1280px;"></div> -->
+    <section id="faq" class="section-light">
+<!--       <div class="faqTransitionLeft" style="border-width: 0px 1280px 100px 0px;"></div> -->
+      <div id="faqContainer">
+        <h1 class="header text-center" id="faqHeader"> Frequently Asked Questions </h1>
+        <div class="row">
+          <div class="columns large-4 small-6">
+              <h3 class="">Where is it?</h3>
+              <p class="text">George Sherman Union, 2nd Floor in Metcalf Hall at 775 Commonwealth Avenue, Boston, MA, 02215.</p>
+          </div>
+          <div class="columns large-4 small-6">
+              <h3 class="">Who's coming?</h3>
+              <p class="text">We expect 400 hackers from all around the world to attend BostonHacks.</p>
+          </div>
+          <div class="columns large-4 small-6">
+              <h3 class="">Who can attend?</h3>
+              <p class="text">All students are welcome. Unfortunately, we will not be able to accommodate students under 18 this year (unless you are a BU student).</p>
+          </div>
+          <div class="columns large-4 small-6">
+              <h3 class="">Do I need experience?</h3>
+              <p class="text">No experience necessary. We will have plenty of mentors and resources. Come, learn, and experience your first hackathon at BostonHacks!</p>
+          </div>
+          <div class="columns large-4 small-6">
+              <h3 class="">Are there any rules?</h3>
+              <p class="text">We want to ensure a positive experience for every participant. We encourage you to read the 
+              <a class="text-orange" href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf">Code of Conduct</a>.</p>
+          </div>
+          <div class="columns large-4 small-6">
+              <h3 class="">What should I bring?</h3>
+              <p class="text">You should bring your laptop, phone, chargers, and sleeping bag. All food and other accommodations will be taken care of.</p>
+          </div>
+          <div class="columns large-4 small-6">
+              <h3 class="">Can we form teams?</h3>
+              <p class="text">Of course you can! We encourage people to work in teams of up to 5 people. You can work alone, but it won't be the same. There will be plenty of team building events on site and online.</p>
+          </div>
+          <div class="columns large-4 small-6">
+              <h3 class="">Does it cost anything?</h3>
+              <p class="text">BostonHacks is 100% free. You won't have to spend a dime! Everything will be absolutely free.</p>
+          </div>
+          <div class="columns large-4 small-6 ">
+              <h3 class="">Will there be travel reimbursements?</h3>
+              <p class="text">We're working on providing travel reimbursements, and we will provide the form later.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+<!--     <div class="faqTransitionRight" style="border-width: 0px 0px 100px 1280px;"></div> -->
 
-    <section class="text-center" id="sponsors">
-      
+    <section id="sponsor" class="section-dark">
+      <div class="row">
+        <div class="columns small-12">
+          <h1 class="text-center header">Sponsor</h1>
+          <p class="p-text">BostonHacks provides an environment for companies to interact with students who will become future customers, leaders, and innovators. As a medium-sized hackathon, you can reach a wide audience while still interacting closely with hackers. Students want to interact with your product and APIs, receive mentorship from your staff, and hear about opportunities available at your company.</p>
+          <p class="p-text">Check out our <a href="BostonHacksFall2017Sponsor.pdf">Sponsor Document</a> or email us at <span class="email-spam-hide"> contact[at]bostonhacks.io</span> to hear more about how you can get involved. We're always available to get on a call.</p>
+        </div>
+      </div>
     </section>
 
     <section class="text-center large-12 columns" id="contact">

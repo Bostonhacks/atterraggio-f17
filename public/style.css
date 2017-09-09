@@ -1,4 +1,16 @@
 /* General*/
+.row {
+  max-width: none !important; }
+
+.text-center {
+  text-align: center; }
+
+.float-left {
+  float: left !important; }
+
+.text-orange {
+  color: #F58549; }
+
 h1,
 h2,
 h3,
@@ -12,18 +24,17 @@ svg {
   height: auto; }
 
 a {
-  color: white;
+  color: #F58549;
   text-decoration: none; }
 
 a:hover, a:focus {
-  color: white;
+  color: #C16C3E;
   text-decoration: none; }
 
 .text {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  color: #F9F5EF;
-  font-size: 1.1em; }
+  color: #F9F5EF; }
 
 .p-text {
   font-weight: 500;
@@ -45,6 +56,18 @@ h4 {
 
 body {
   background-color: #212939; }
+
+#bg-image {
+  background: url("/public/homebg3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center; }
+
+#bg-overlay {
+  background-color: rgba(42, 45, 60, 0.9); }
+
+#home {
+  padding-bottom: 20px; }
 
 #mlh-trust-badge {
   display: block;
@@ -70,18 +93,81 @@ body {
   margin-left: auto;
   margin-right: auto; }
 
+.section-light {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #EADFD8; }
+
+.section-light p {
+  color: #4A4B4E; }
+
+.section-light h1 {
+  font-weight: 300;
+  color: #4A4B4E; }
+
+.section-light h3 {
+  color: #4A4B4E; }
+
+.section-dark {
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
+.section-dark p {
+  color: #F9F5EF; }
+
+.section-dark h1 {
+  color: #F58549; }
+
 /* About */
 #about {
-  background-color: #2F3B53; }
+  background-color: #EADFD8;
+  padding: 0;
+  transition: background-color 0.3s; }
 
-#aboutHeader {
-  padding-left: 40px;
-  font-weight: bold; }
+#about .header {
+  padding-top: 40px; }
 
+#about-hacking {
+  background-color: #F58549;
+  border-radius: 1000px 0px 0px 1000px;
+  transition: background-color 0.3s, transform 0.3s; }
+
+#about-hacking:hover, #about-hacking:active {
+  cursor: pointer;
+  background-color: #C16C3E;
+  transform: translate(10px, 0px); }
+
+#about-hacking h1 {
+  font-weight: 300;
+  padding: 100px 0px 100px 0px;
+  color: white; }
+
+#aboutHackathons {
+  background-color: #F58549; }
+
+#aboutHackathons p, #aboutHackathons h1 {
+  color: #F9F5EF; }
+
+@media (max-width: 1023px) {
+  #about-hacking {
+    border-radius: 0px;
+    height: 100px !important; }
+
+  #about-hacking:hover, #about-hacking:active {
+    transform: translate(0px, 10px); }
+
+  #about-hacking h1 {
+    padding: 0px; } }
+/*
+#about-hacking::before {
+  width: 100%;
+  border-style: solid;
+  border-width: 0 0 1000px 20px;
+  border-color: transparent transparent transparent $bgColor;
+  overflow-y: hidden;
+}
+*/
 /* Attend */
-#attend {
-  background-color: #2F3B53; }
-
 #homeButtonsContainer {
   margin-top: 20px;
   margin-bottom: 20px; }
@@ -136,11 +222,55 @@ label {
 
   #sponsorButton {
     margin-left: 5px; } }
+.track-container {
+  background-color: #EADFD8;
+  border-radius: 10px;
+  border: 2px solid #A69C95; }
+
+.track-container > * {
+  padding: 20px; }
+
+.track-container h2 {
+  text-align: center;
+  color: #727478;
+  font-weight: 600;
+  padding-top: 40px;
+  padding-bottom: 20px; }
+
+.track-container h3 {
+  padding-top: 20px;
+  padding-bottom: 5px;
+  font-weight: 600;
+  color: #727478; }
+
+.track-container p {
+  color: #4A4B4E; }
+
+.track-workshop {
+  position: relative;
+  top: -1px;
+  color: #4A4B4E;
+  border-top: 1px solid #A69C95; }
+
+.track-workshop i {
+  text-align: right;
+  position: absolute;
+  right: 20px;
+  bottom: 16px; }
+
+.track-question {
+  color: #727478;
+  width: 100%;
+  margin-top: calc(50% - 40px);
+  text-align: center; }
+
 /* FAQ */
 #faq {
   width: 100%;
-  background-color: #2F3B53;
   padding-bottom: 50px; }
+
+#faq h3 {
+  font-weight: 600; }
 
 .faqTransitionLeft {
   width: 100%;
@@ -154,19 +284,19 @@ label {
   height: 0;
   border-style: solid;
   border-width: 0 0 100px 200px;
-  border-color: transparent transparent transparent #2F3B53; }
+  border-color: transparent transparent transparent #EADFD8; }
 
 #faqContainer {
-  width: 100%;
-  background-color: #2F3B53; }
+  width: 100%; }
 
 .header {
-  padding-top: 40px;
-  padding-bottom: 40px; }
+  padding-bottom: 20px; }
 
+/*
 #faqHeader {
-  color: #222B30; }
-
+  color: #222B30;
+}
+*/
 .sponsor-img {
   height: 80px; }
 
@@ -184,7 +314,7 @@ label {
 
 /* Animation */
 #icon-ghost {
-  transform: translate(35%, -15%);
+  transform: translate(35%, -10%);
   animation: bob-the-ghost 4s ease-in-out 0s infinite alternate; }
 
 #icon-pump {
@@ -193,9 +323,9 @@ label {
 
 @keyframes bob-the-ghost {
   from {
-    transform: translate(35%, -15%); }
+    transform: translate(35%, -10%); }
   to {
-    transform: translate(35%, -5%); } }
+    transform: translate(35%, 0%); } }
 @keyframes bob-the-pump {
   0% {
     transform: translate(35%, 20%) rotate(0deg); }

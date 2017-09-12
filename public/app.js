@@ -1,5 +1,11 @@
 $(document).foundation()
 
+$( document ).ready(function() {
+  
+  $('#mailchimp-signup').hide();
+  
+});
+
 whatIsTrigger = false;
 
 function clickWhatIsHackathon() {
@@ -48,4 +54,7 @@ function clickWhatIsHackathon() {
 
 var showSignup = function() {
   $('#mailchimp-signup').show();
+  $('html, body').animate({
+    scrollTop: $("#mailchimp-signup").offset().top - 400
+  }, 500);
 } 

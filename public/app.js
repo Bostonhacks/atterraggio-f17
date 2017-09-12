@@ -45,3 +45,7 @@ function clickWhatIsHackathon() {
     whatIsTrigger = true;
   }
 }
+
+var showSignup = function() {
+  $('#mailchimp-signup').show();
+} 

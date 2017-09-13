@@ -129,7 +129,10 @@ body {
 
 #about-hacking {
   background-color: #F58549;
-  border-radius: 1000px 0px 0px 1000px;
+  border-radius: 100px 0px 0px 100px;
+  height: 100px;
+  position: relative;
+  top: 100px;
   transition: background-color 0.3s, transform 0.3s; }
 
 #about-hacking:hover, #about-hacking:active {
@@ -139,7 +142,6 @@ body {
 
 #about-hacking h1 {
   font-weight: 300;
-  padding: 100px 0px 100px 0px;
   color: white; }
 
 #aboutHackathons {
@@ -151,6 +153,7 @@ body {
 @media (max-width: 1023px) {
   #about-hacking {
     border-radius: 0px;
+    top: 0px;
     height: 100px !important; }
 
   #about-hacking:hover, #about-hacking:active {
@@ -175,8 +178,7 @@ body {
 .homeButtons {
   width: 250px;
   border-width: 2px;
-  padding: 8px 30px 8px 30px;
-  height: 50px;
+  padding: 12px 30px 12px 30px;
   border-radius: 25px;
   font-size: 24px;
   font-family: 'Open Sans', sans-serif;
@@ -222,6 +224,12 @@ label {
 
   #sponsorButton {
     margin-left: 5px; } }
+#track-column-contain {
+  padding: 0px 55px; }
+
+@media (max-width: 639px) {
+  #track-column-contain {
+    padding: 0px 25px; } }
 .track-container {
   background-color: #EADFD8;
   border-radius: 10px;
@@ -240,7 +248,7 @@ label {
 .track-container h3 {
   padding-top: 20px;
   padding-bottom: 5px;
-  font-weight: 600;
+  font-weight: 900;
   color: #727478; }
 
 .track-container p {
@@ -261,9 +269,11 @@ label {
 .track-question {
   color: #727478;
   width: 100%;
-  margin-top: calc(50% - 40px);
   text-align: center; }
 
+@media (min-width: 1024px) {
+  .track-question {
+    margin-top: calc(50% - 40px); } }
 /* FAQ */
 #faq {
   width: 100%;
@@ -289,6 +299,12 @@ label {
 #faqContainer {
   width: 100%; }
 
+#faqContainer .row {
+  padding: 0px 70px; }
+
+@media (max-width: 768px) {
+  #faqContainer .row {
+    padding: 0px 25px; } }
 .header {
   padding-bottom: 20px; }
 
@@ -298,7 +314,9 @@ label {
 }
 */
 .sponsor-img {
-  height: 80px; }
+  height: 80px;
+  display: block;
+  margin: 0 auto; }
 
 #contact {
   margin: 50px 0 75px 0; }
@@ -314,30 +332,40 @@ label {
 
 /* Animation */
 #icon-ghost {
-  transform: translate(35%, -10%);
-  animation: bob-the-ghost 4s ease-in-out 0s infinite alternate; }
+  transform: translate(0%, -10%);
+  animation: bob-the-ghost 4s ease-in-out 0s infinite alternate;
+  position: relative; }
 
 #icon-pump {
-  transform: translate(35%, 20%) rotate(0deg);
-  animation: bob-the-pump 8s ease-in-out 0s infinite alternate; }
+  transform: translate(0%, 10%) rotate(0deg);
+  animation: bob-the-pump 8s ease-in-out 0s infinite alternate;
+  position: relative;
+  left: calc(50% - 100px); }
 
+@media (min-width: 1024px) {
+  #icon-ghost {
+    left: 50px; }
+
+  #icon-pump {
+    left: 20%;
+    top: 20px; } }
 @keyframes bob-the-ghost {
   from {
-    transform: translate(35%, -10%); }
+    transform: translate(0%, -10%); }
   to {
-    transform: translate(35%, 0%); } }
+    transform: translate(0%, 0%); } }
 @keyframes bob-the-pump {
   0% {
-    transform: translate(35%, 20%) rotate(0deg); }
+    transform: translate(0%, 10%) rotate(0deg); }
   90% {
-    transform: translate(35%, 20%) rotate(2deg); }
+    transform: translate(0%, 12%) rotate(2deg); }
   92% {
-    transform: translate(33%, 20%) rotate(-2deg); }
+    transform: translate(-2%, 10%) rotate(-2deg); }
   94% {
-    transform: translate(36%, 20%) rotate(2deg); }
+    transform: translate(2%, 12%) rotate(2deg); }
   96% {
-    transform: translate(36%, 20%) rotate(-2deg); }
+    transform: translate(2%, 10%) rotate(-2deg); }
   100% {
-    transform: translate(35%, 20%) rotate(0deg); } }
+    transform: translate(0%, 8%) rotate(0deg); } }
 
 /*# sourceMappingURL=style.css.map */

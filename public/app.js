@@ -18,7 +18,7 @@ function clickWhatIsHackathon() {
     
     setTimeout(function(){
       $('#aboutHeader').html("Welcome to Boston");
-      $('#aboutText').html("BostonHacks is Boston University's annual hackathon. 400 students will come from all around North America to create a project in 24 hours. They'll forms teams to build project that addresses a problem or idea, learning about different technologies along the way and building their experience as developers.");
+      $('#aboutText').html("BostonHacks is Boston University's annual hackathon. 400 students will come from all around North America to form teams around creating an awesome project in 24 hours. Along the way they'll learn about how to use new technologies and will build their experience as developers.<br><br>Come join us for a weekend full of workshops and learning, paired with halloween themed side events and fun.");
       $('#what-is-question').html('What is a Hackathon? &nbsp;<i class="fa fa-caret-right" aria-hidden="true"></i>');
       $('#aboutHeader').css("color","#4A4B4E");
       $('#aboutText').css("color","#4A4B4E");
@@ -38,8 +38,8 @@ function clickWhatIsHackathon() {
     
     setTimeout(function(){
       $('#aboutHeader').html("What is a Hackathon?");
-      $('#aboutText').html("Descriptionn");
-      $('#what-is-question').html('<i class="fa fa-times fa-3x" aria-hidden="true"></i>');
+      $('#aboutText').html("Hackathons are invention competitions that foster an environment for innovation and learning. College students from all levels of experience attend hackathons around the world which general span a weekend. Students often forms teams with others they've never met before, and in 24 hours create a project that addresses a real-world problem they've identified.");
+      $('#what-is-question').html('<i class="fa fa-times fa-2x" style="font-size: 1.7em !important;" aria-hidden="true"></i>');
       $('#aboutHeader').css("color","#F9F5EF");
       $('#aboutText').css("color","#F9F5EF");
     },200);

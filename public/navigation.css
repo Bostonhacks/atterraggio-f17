@@ -8,8 +8,10 @@
 
 /*   width: fit-content; */
   
-  left: 25vw;
-  
+  left: 50%;
+  transform: translate(-50%,0%);
+  white-space: nowrap;
+    
   z-index: 100;
 
   border-left: 3px solid #F58549;
@@ -35,11 +37,22 @@
 }
 
 .force-left-margin {
-  padding-left: 40px !important;
-  padding-right: 40px !important;
+  padding-left: 70px !important;
+  padding-right: 70px !important;
 }
 
 .force-right-align {
   text-align: right;
-  padding-right: 40px !important;
+  padding-right: 70px !important;
+}
+
+@media (max-width: 1024px) {
+  .force-right-align {
+    padding-right: 40px !important;  
+  }
+  
+  .force-left-margin {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
 }

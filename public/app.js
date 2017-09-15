@@ -38,7 +38,7 @@ function clickWhatIsHackathon() {
     
     setTimeout(function(){
       $('#aboutHeader').html("What is a Hackathon?");
-      $('#aboutText').html("Hackathons are invention competitions that foster an environment for innovation and learning. College students from all levels of experience attend hackathons around the world which general span a weekend. Students often forms teams with others they've never met before, and in 24 hours create a project that addresses a real-world problem they've identified.");
+      $('#aboutText').html("Hackathons are invention competitions that foster an environment for innovation and learning. College students from all levels of experience attend hackathons around the world that generally span a weekend. Students forms teams with others they've often never met before, and in 24 hours create a project that addresses a real-world problem they've identified.");
       $('#what-is-question').html('<i class="fa fa-times fa-2x" style="font-size: 1.7em !important;" aria-hidden="true"></i>');
       $('#aboutHeader').css("color","#F9F5EF");
       $('#aboutText').css("color","#F9F5EF");

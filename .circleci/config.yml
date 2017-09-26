@@ -1,7 +1,9 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/bostonhacks-static
+    working_directory: ~/bostonhacks-static    
+    docker:
+      image: circleci/node:7
     steps:
       - checkout
       - deploy:

@@ -11,4 +11,5 @@ jobs:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               scp -o StrictHostKeyChecking=no -r ~/bostonhacks-static/index.html circleci@${BOSTONHACKS_IP_ADDR}:/var/www/bostonhacks-static/
+              scp -o StrictHostKeyChecking=no -r ~/bostonhacks-static/public/ circleci@${BOSTONHACKS_IP_ADDR}:/var/www/bostonhacks-static/public/
             fi

@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/bostonhacks-static    
     docker:
-      image: circleci/node:7
+      - image: circleci/node:7
     steps:
       - checkout
       - deploy:
